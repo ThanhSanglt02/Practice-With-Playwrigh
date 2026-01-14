@@ -21,12 +21,7 @@ export class BasePage {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
     }
 
-    getdynamicElementContainsText(text: string) {}
-    dynamicElementContainsText1(text: string) {
-        return this.page.locator(`//*[contains(text(), "${text}")]`);
-    }
-
-    dynamicElementContainsText2(text: string) {
+    getdynamicElementContainsText(text: string) {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
     }
 }
