@@ -12,6 +12,7 @@ export class BasePage {
     constructor(protected page: Page) {
             (this.appMenuBtn = page.locator(this.appMenuBtnPath)),
         (this.appMenuBtn = page.locator(this.appMenuBtnPath)),
+            (this.appMenuBtn = page.locator(this.appMenuBtnPath)),
             (this.appLogoutBtn = page.locator(this.appLogoutBtnPath)),
             (this.appShoppingCartBadge = page.locator(this.appShoppingCartBadgePath));
     }
@@ -20,12 +21,12 @@ export class BasePage {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
     }
 
+    getdynamicElementContainsText(text: string) {}
     dynamicElementContainsText1(text: string) {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
     }
 
-    dynamicElementContainsText2(text: string) {}
-    getdynamicElementContainsText(text: string) {
+    dynamicElementContainsText2(text: string) {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
     }
 }
