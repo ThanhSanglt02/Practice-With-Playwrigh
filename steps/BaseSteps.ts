@@ -17,4 +17,8 @@ export class BaseSteps {
     public async clickMenuButton() {
         await basePage.appMenuBtn.click();
     }
+
+    public async clickMenuButton1() {
+        await basePage.appMenuBtn.click();
+    }
 }
