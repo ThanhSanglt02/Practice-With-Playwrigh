@@ -18,6 +18,10 @@ export class LoginSteps extends BaseSteps {
     public async clickLoginButton() {
         await loginPage.loginButton.click()
     }
+
+    public async clickLoginButton1() {
+        await loginPage.loginButton.click()
+    }
     
     public async verifyLoginSuccess() {
         // const productPage = new ProductPage(this.page);
