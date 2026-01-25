@@ -24,4 +24,8 @@ export class LoginPage extends BasePage {
         this.errorCloseButton = page.locator(this.errorCloseButtonPath);
     }
 
+    public login() {
+        console.log("Testing commit")
+    }
+
 }

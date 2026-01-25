@@ -32,4 +32,22 @@ test.describe('Login Page', async() => {
         });
     });
 
+    failedUsersCredentials.forEach(({ username, password, expectedError }) => {
+        test(`Verify if user is failed to login to the application with ABC ${username}:${password}`, async({
+            loginSteps,
+        }) => {
+            await test.step("Fill username & password and click login btn", async({}) => {
+                await loginSteps.fillCredentials(username, password);
+                await loginSteps.clickLoginButton();
+            });
+            await test.step("Verify that user is failed to login to page1", async({}) => {
+                await loginSteps.verifyLoginFailedWithErrorMsg(expectedError)
+            });
+
+            await test.step("Verify that user is failed to login to page", async({}) => {
+                await loginSteps.verifyLoginFailedWithErrorMsg(expectedError)
+            });
+        });
+    });
+
 });

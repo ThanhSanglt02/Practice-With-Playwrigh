@@ -10,9 +10,9 @@ export class BasePage {
     readonly appShoppingCartBadge: Locator;
 
     constructor(protected page: Page) {
-        (this.appMenuBtn = page.locator(this.appMenuBtnPath)),
+        ((this.appMenuBtn = page.locator(this.appMenuBtnPath)),
             (this.appLogoutBtn = page.locator(this.appLogoutBtnPath)),
-            (this.appShoppingCartBadge = page.locator(this.appShoppingCartBadgePath));
+            (this.appShoppingCartBadge = page.locator(this.appShoppingCartBadgePath)));
     }
 
     dynamicElementContainsText(text: string) {
@@ -21,5 +21,9 @@ export class BasePage {
 
     getdynamicElementContainsText(text: string) {
         return this.page.locator(`//*[contains(text(), "${text}")]`);
+    }
+
+    getPage() {
+        return this.page;
     }
 }
